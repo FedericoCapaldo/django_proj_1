@@ -11,3 +11,8 @@ class ProductSerializer(serializers.ModelSerializer):
     def to_representation(self, instance):
         data = super().to_representation(instance)
         return data
+
+
+class GenericProductSerializer(serializers.Serializer):
+    product_name = serializers.CharField()
+    product_description = serializers.CharField()
